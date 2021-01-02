@@ -1,0 +1,2 @@
+# alfred-log-parse
+RT
