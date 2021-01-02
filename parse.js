@@ -21,8 +21,7 @@ fs.readFile(readFilePath, function(err, data) {
 
   // 1. 匹配JSON字符串
   const dataString = data.toString();
-  const math =  dataString.match(/{"i(\S*)/);
-  console.log('ddd dataString: '+ dataString);
+  const math =  dataString.match(/{"(\S*)/);
   const json = math ? math[0] : dataString;
   const isValid = isValidJSONString(json);
   const writeStr = isValid ?  JSON.stringify(JSON.parse(json), null, 2) : dataString;
